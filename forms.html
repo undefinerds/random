@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Formulario en CSS</title>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<meta charset="utf-8" />
+<style>
+html, body {
+min-height: 100vh;
+overflow: hidden;
+font-family: 'Monserrat', sans-serif;
+background: rgb(60, 60, 60);
+background: -webkit-linear-gradient(rgb(0, 0, 0) 5%, rgb(60, 60, 60) 85%, rgb(0, 0, 0));
+background: -moz-linear-gradient(rgb(0, 0, 0) 5%, rgb(60, 60, 60) 85%, rgb(0, 0, 0));
+background: -ms-linear-gradient(rgb(0, 0, 0) 5%, rgb(60, 60, 60) 85%, rgb(0, 0, 0));
+background: -o-linear-gradient(rgb(0, 0, 0) 5%, rgb(60, 60, 60) 85%, rgb(0, 0, 0));
+background: linear-gradient(rgb(0, 0, 0) 5%, rgb(60, 60, 60) 85%, rgb(0, 0, 0));
+}
+
+h1 {
+text-align: center;
+position: relative;
+margin: 10px;
+color: #FFF;
+text-shadow: 5px 5px 10px #777;
+}
+
+.center {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.hide {
+top: -100%;
+display: none;
+}
+
+input {
+border-style: hidden hidden solid hidden;
+border-color: #FFAA22;
+}
+
+input:focus {
+border-color: #4445DD;
+}
+
+input[type="button"] {
+border-style: solid;
+background-color: rgba(255, 255, 255, 0);
+cursor: pointer;
+}
+
+input[type="button"]:hover {
+border-style: solid;
+background-color: #FFAA22;
+color: #FFF;
+}
+
+input[type="button"]:focus {
+background-color: #4445DD;
+color: #FFF;
+}
+
+label {
+display: block;
+left: 0;
+font-size: 0.8em;
+}
+
+textarea {
+min-width: 100px;
+min-height: 80px;
+max-width: 500px;
+max-height: 300px;
+}
+
+fieldset {
+background: #FFF;
+min-height: 300px;
+padding: 3vmax;
+border-style: none;
+box-shadow: 0px 0px 10px 3px #AAA;
+}
+
+</style>
+</head>
+<body>
+<h1>Datos Personales del Estudiante</h1>
+<form action="datos.php" method="post">
+<fieldset id="one" class="center">
+<label for="nombre">Nombre</label>
+<input type="text" placeholder="ej. Carlos Ramiro"
+maxlength="15" name="nombre" id="nombre">
+<br><br>
+<label for="apellido">Apellido</label>
+<input type="text" placeholder="ej. Ramones Flores"
+maxlength="15" name="apellido" id="apellido">
+<br><br>
+<label for="fecha">Nacimiento</label>
+<input type="date" placeholder="dd/mm/aa" maxlength="15" name="fecha" id="fecha">
+<br><br>
+<label>Nacionalidad</label>
+<input type="radio" name="nacionalidad"
+value="venezolano">V</input>
+<input type="radio" name="nacionalidad"
+value="extranjero">E</input>
+<br><br><label for="cedula">Cedula</label>
+<input type="text" placeholder="ej. 12345678"
+maxlength="15" name="cedula" id="cedula">
+<br><br>
+<label>¿Posee beca salario?</label>
+<input type="radio" name="beca" value="si"/>Si
+<input type="radio" name="beca" value="no"/>No
+<br><br>
+<input type="button" name="next" id="next" value="Siguiente" />
+</fieldset>
+<fieldset id="two" class="hide"><br>
+
+<label>Actividades que realiza</label><br>
+<input type="checkbox" name="actividad"
+value="trabaja">Trabaja</input><br>
+<input type="checkbox" name="actividad"
+value="estudia">Estudia</input>
+<br><br>
+<label for="telefono">Telefono</label>
+<input type="text" placeholder="ej. (+58)-455-5555"
+maxlength="15" name="telefono" id="telefono">
+<br><br>
+<label for="direccion">Direccion</label>
+<textarea rows="4" cols="50" name="direccion"
+maxlength="50" placeholder="Ingresa tu Direccion" id="direccion" required></textarea>
+<br><br>
+<label>Seleccione su PNF</label>
+<select name="pnf" multiple>
+<option value="0" selected>Seleccione su
+PNF</option>
+<option value="electricidad">Electricidad</option>
+<option value="civil">Civil</option>
+<option value="mecanica">Mecanica</option>
+<option value="informatica">Informatica</option>
+<option
+value="instrumentacion">Instrumentacion</option>
+<option value="contaduria">Contaduria</option>
+<option
+value="administracion">Administracion</option>
+</select>
+<br><br>
+<input type="button" name="enviar" value="Enviar">
+</fieldset>
+</form>
+<script>
+var next = document.querySelector('#next');next.addEventListener('click',function(){var foo = document.querySelector('#two');this.className = 'hidden';foo.className = "center";});
+</script>
+</body>
+</html>

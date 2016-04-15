@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+		    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Exo+2' rel='stylesheet' type='text/css'>
+  <style>
+  html, body {
+    max-width: 100vw;
+    min-height: 100vh;
+    font: 1em 'Open Sans Condensed', 'Helvetica', 'Lato', sans;
+    color: #FFF;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+  }
+  body {
+    background-color: #FFF;
+    background-image: radial-gradient(circle, rgba(150, 150, 150, 0.1) 45%, rgb(250, 250, 250));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  a {
+    text-decoration: none;
+    color: #7170FB;
+  }
+  a:hover { color: #8B8AFF; }
+  p {
+    text-align: justify;
+    text-indent: 2%;
+    color: #000;
+  }
+  h1, h2, h3 {
+    font-family: 'Exo 2', 'Helvetica', serif;
+    text-align: center;
+  }
+  h4, h5, h6 { font-family: sans-serif; }
+  h1 {
+    text-transform: uppercase;
+    text-shadow: 0px 0px 15px #444;
+  }
+  h4 { font-style: italic; }
+  header { top: 0; }
+  body > header {
+    position: relative;
+    min-height: 25vh;
+    max-height: 50vh;
+    margin: 5% 0;
+  }
+  body > header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    min-width: 100vw;
+    position: fixed;
+  }
+  nav div { display: none; }
+  nav ul li {
+    display: inline;
+    padding: 0.5%;
+    color: #;
+  }
+  nav ul li:hover { background-color: rgb(100, 255, 123); }
+  nav ul li a { color: #FFF; }
+  nav ul li a:hover { color: #FFF; }
+  section, article {
+    display: block;
+    margin: 5%;
+  }
+  section article {
+    background-color: #FFF;
+    padding: 10%;
+    margin: 2%;
+  }
+  aside h4 {
+    background-color: rgba(250, 150, 150, 0.6);
+    padding: 5px;
+  }
+  aside ul {
+    list-style: none;
+    text-align: right;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    z-index: 10;
+    background-color: #FFF;
+    color: #000;
+    max-height: 15vh;
+  }
+  footer p { text-align: center; }
+  .container {
+    display: block;
+    position: relative;
+  }
+  @media screen and (min-width: 550px) {
+    section {
+      position: absolute;
+      float: left;
+      max-width: 65vw;
+    }
+    aside {
+      position: relative;
+      float: right;
+    }
+    .shrink {
+      background-color: #333;
+      z-index: 20;
+    }
+  }
+  @media (max-width: 500px) {
+    nav {
+      max-height: 2vmax;
+      position: absolute;
+    }
+    nav div {
+      display: block;
+      float: left;
+      padding: 5%;
+      background-color: #FFF;
+      color: #7170FB;
+    }
+    nav ul {
+      visibility: hidden;
+      z-index: -1;
+      display: block;
+    }
+    nav:hover > ul {
+      visibility: visible;
+      background-color: #000;
+    }
+  }
+	</style>
+    <head>
+    <body>
+        <header>
+            <h1>Responsive Design con CSS3 Media Queries</h1>
+        </header>
+        <nav class="me">
+			<div class="extra"></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Quienes somos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <header><h3><a href="#">HTML5</a></h3></header>
+                <p><strong>HTML5</strong> (<em>HyperText Markup Language</em>, versión 5) es la quinta revisión importante del lenguaje básico de la
+<a href="#">World Wide Web</a>, <a href="#">HTML</a>. HTML5 especifica dos variantes de sintaxis para HTML: un «clásico» HTML
+(text/html), la variante conocida como <m>HTML5</em> y una variante <a href="#">XHTML</a> conocida como sintaxis <em>XHTML5</em> que
+deberá ser servida como XML (XHTML) (application/xhtml+xml).<a href="#">1</a> <a href="#">2</a> Esta es la primera vez que HTML y
+XHTML se han desarrollado en paralelo.</p>
+<p>Todavía se encuentra en modo experimental, lo cual indica la misma W3C; aunque ya es usado por múltiples
+desarrolladores web por sus avances, mejoras y ventajas.</p>
+<p>Al no ser reconocido en viejas versiones de navegadores por sus nuevas etiquetas, se le recomienda al usuario
+común actualizar a la versión más nueva, para poder disfrutar de todo el potencial que provee HTML5.</p>
+            </article>
+            <article>
+                <header><h3><a href="#">CSS3</a></h3></header>
+                <p>El nombre <strong>hojas de estilo en cascada</strong> viene del <a href="#">inglés</a> <em>Cascading Style Sheets</em>, del que toma sus siglas. CSS es
+un lenguaje usado para definir la presentación de un documento estructurado escrito en <a href="#">HTML</a> o <a href="#">XML2</a> (y por extensión en <a href="#">XHTML</a>).</p>
+<p>El <a href="#">W3C</a> (World Wide Web Consortium) es el encargado de formular la especificación de las <a href="#">hojas de estilo</a> que
+servirán de estándar para los <a href="#">agentes de usuario</a> o <a href="#">navegadores</a>.</p>
+<p>La idea que se encuentra detrás del desarrollo de CSS es separar la <em>estructura</em> de un documento de su
+<em>presentación</em>.</p>
+            </article>
+        </section>
+        <aside>
+            <article>
+                <h4>Noticias</h4>
+                <ul>
+                    <li><a href="#">Diseño web</a></li>
+                    <li><a href="#">Diseño Gráfico</a></li>
+                    <li><a href="#">Wordpress</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </article>
+            <article>
+                <h4>Sitios Web</h4>
+                <ul>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Wordpress</a></li>
+                    <li><a href="#">Google+</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </article>
+        </aside>
+        <footer>
+            <p>Tutorial por <a href="#">Responsive Design</a></p>
+        </footer>
+		<script>
+  function all(nav){
+    var screenWidth = window.innerWidth || document.body.clientWidth;
+    nav.querySelector('div').innerHTML = "";
+    if (screenWidth < 500)
+      nav.querySelector('div').innerHTML = "<h5>Menu</h5>";
+  }
+
+  window.onscroll = document.onscroll = function(){
+    var nav = document.querySelector('.me');
+    if(document.body.scrollTop >= 30 || document.documentElement.scrollTop >= 30){
+      if(!(/shrink/gi).test(nav.className))
+        nav.className += ' shrink';
+      nav.querySelector('ul').className = 'shrink';
+    } else {
+      nav.className = 'me';
+      nav.querySelector('ul').className = '';}
+    }
+  }
+  window.onresize = function(){ all(document.querySelector('.me')); };
+		</script>
+    <body>
+</html>
